@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Techdrips</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Litla+One&family=Comfortaa:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Comfortaa', cursive;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to right, #1e3c72, #ff0000);
+        }
+
+        .container {
+            text-align: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        h1 {
+            font-family: 'Litla One', cursive;
+            color: #333;
+            font-size: 2.5em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .share-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-family: 'Comfortaa', cursive;
+            padding: 12px 20px;
+            border-radius: 50px;
+            background: #0078ff;
+            font-size: 1em;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .btn:hover {
+            transform: translateX(5px);
+        }
+
+        .btn:active {
+            animation: shake 0.2s ease-in-out;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+
+        /* Falling Bubbles */
+        .bubble {
+            position: absolute;
+            bottom: 100%;
+            background: rgba(173, 216, 230, 0.7);
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+
+        /* Generate multiple bubbles dynamically */
+        .bubble:nth-child(1) { width: 20px; height: 20px; left: 5%; animation-duration: 5s; }
+        .bubble:nth-child(2) { width: 25px; height: 25px; left: 15%; animation-duration: 7s; }
+        .bubble:nth-child(3) { width: 15px; height: 15px; left: 25%; animation-duration: 4s; }
+        .bubble:nth-child(4) { width: 30px; height: 30px; left: 35%; animation-duration: 6s; }
+        .bubble:nth-child(5) { width: 18px; height: 18px; left: 45%; animation-duration: 8s; }
+        .bubble:nth-child(6) { width: 22px; height: 22px; left: 55%; animation-duration: 5s; }
+        .bubble:nth-child(7) { width: 26px; height: 26px; left: 65%; animation-duration: 7s; }
+        .bubble:nth-child(8) { width: 20px; height: 20px; left: 75%; animation-duration: 4s; }
+        .bubble:nth-child(9) { width: 15px; height: 15px; left: 85%; animation-duration: 6s; }
+        .bubble:nth-child(10) { width: 25px; height: 25px; left: 95%; animation-duration: 5s; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Techdrips!</h1>
+        <p>Explore the latest in tech and join our community. Share and connect!</p>
+        <div class="share-buttons">
+            <a href="https://www.youtube.com/@theOfficialTechdrips?sub_confirmation=1" target="_blank" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon.png" alt="YouTube"> Share on YouTube
+            </a>
+            <a href="https://discord.gg/your-server-link" target="_blank" class="btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Discord.png" alt="Discord"> Join on Discord
+            </a>
+        </div>
+    </div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+</body>
+</html>
